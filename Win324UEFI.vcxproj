@@ -48,7 +48,7 @@
     <GenerateManifest>false</GenerateManifest>
     <TargetName>$(MSBuildProjectName)</TargetName>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>$(SolutionDir)\includes\MdePkg\Include;$(SolutionDir)\includes\MdePkg\Include\x64;$(SolutionDir)\includes\MdePkg\Include\Protocol;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Include;$(SolutionDir)Include\x64;$(SolutionDir)Include\Protocol;$(IncludePath)</IncludePath>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UEFIShell|x64'">

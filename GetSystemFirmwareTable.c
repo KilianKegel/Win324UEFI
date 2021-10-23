@@ -172,8 +172,9 @@ uint32_t EFIAPI GetSystemFirmwareTable4UEFI(
                     else                                                //
                     {                                                   // DSDT request
                         EFI_ACPI_2_0_FIXED_ACPI_DESCRIPTION_TABLE* pFADT//
-                            = *ppTBL;                                   //
-                        EFI_ACPI_2_0_COMMON_HEADER* pDSDT = pFADT->Dsdt;//
+                            = (void*) * ppTBL;                          //
+                        uint64_t tmp64 = pFADT->Dsdt;                   // typecast 32 -> 64 1/2
+                        EFI_ACPI_2_0_COMMON_HEADER* pDSDT=(void*)tmp64; // typecast 32 -> 64 2/2
                         pTbl = pDSDT;                                   //
                         sizeTbl = pDSDT->Length;                        // save table length
                         foundTbl = true;                                // mark found flag and...
@@ -190,7 +191,7 @@ uint32_t EFIAPI GetSystemFirmwareTable4UEFI(
             if (sizeTbl <= BufferSize)
                 if (NULL != pFirmwareTableBuffer) {
                     memcpy(pFirmwareTableBuffer, pTbl, (size_t)sizeTbl);
-                    *pAddress = pTbl;
+                    *pAddress = (uint64_t)pTbl;
                 }
         }
 
