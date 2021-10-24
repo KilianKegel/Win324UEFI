@@ -15,8 +15,7 @@ Abstract:
     Verifies that the calling process has read access to the specified range of memory.
 
 --*/
-#include <stdint.h>
-#include <time.h>
+#include <windows.h>
 
 /** Sleep()
 Synopsis
@@ -30,7 +29,7 @@ Paramters
 Returns
     https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-isbadreadptr#return-value
 **/
-int IsBadReadPtr4UEFI(const void* lp, uint32_t*   ucb)
+int IsBadReadPtr4UEFI(const void* lp, UINT_PTR   ucb)
 {
     return 0;
 }
