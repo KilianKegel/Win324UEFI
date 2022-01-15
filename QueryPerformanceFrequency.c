@@ -1,6 +1,6 @@
 /*++
 
-Copyright (c) 2021, Kilian Kegel. All rights reserved.<BR>
+Copyright (c) 2021-2022, Kilian Kegel. All rights reserved.<BR>
 
     SPDX-License-Identifier: GNU General Public License v3.0 only
 
@@ -49,9 +49,9 @@ Returns
     GetTscPerSec() returns the TimeStampCounter counts per second
 
     NTSC Color Subcarrier:  f = 3.579545MHz * 4 ->
-                            f = 14.31818MHz / 12 -> 1.193181666...MHz
-    PIT 8254 input clk:     f = 1.193181666MHz
-                            f = 11931816666Hz / 59659 ->
+                            f = 14.31818MHz / 12 -> 1.193181818...MHz
+    PIT 8254 input clk:     f = 1.193181818MHz
+                            f = 11931818181Hz / 59659 ->
                             f = 20Hz -> t = 1/f
                             t = 50ms
                             ========
