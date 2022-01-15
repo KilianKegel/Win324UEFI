@@ -17,9 +17,6 @@
     <ClCompile Include="Sleep.c" />
     <ClCompile Include="__ChkACPISignature.c" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{223b3668-e022-4da7-a33d-c9168d1357a3}</ProjectGuid>
